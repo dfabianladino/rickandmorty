@@ -8,7 +8,7 @@ const app = express();
 app.use(static('./dist/rickandmorty'));
 
 app.get('/*', function (req, res) {
-
+    // estas son pruebas
     res.sendFile(join(__dirname, '/dist/rickandmorty/index.html'));
 });
 
