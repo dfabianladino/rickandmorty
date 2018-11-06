@@ -5,11 +5,11 @@ import { join } from 'path';
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(static('./dist/rickandmorty'));
+app.use(static('./dist'));
 
 app.get('/*', function (req, res) {
     // estas son pruebas
-    res.sendFile(join(__dirname, '/dist/rickandmorty/index.html'));
+    res.sendFile(join(__dirname, '/dist/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
