@@ -21,6 +21,7 @@ export class CharatesService {
   }
 
   getDetailCharacters(id): Observable<any> {
+    const headers = new Headers({ 'Access-Control-Allow-Origin': '*' });
     return this.http.get(this.API_ENDPOINT + '/character/id');
   }
 }
